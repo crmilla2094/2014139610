@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2014139610
 {
-    class Asiento
+    public class Asiento
     {
         public string NumSerie {get; set;}
         

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2014139610
 {
-    class Cinturon
+    public class Cinturon
     {
         public string NumSerie { get; set; }
         public int Metraje { get; set; }

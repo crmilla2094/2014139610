@@ -19,11 +19,12 @@ namespace _2014139610
     public Carro (){
         
     }
-    public Carro(int numLlantas, int numAsientos) {
-        _volante = new Volante();
-        _parabrisas = new Parabrisas();
-        _propietario = new Propietario();
-        _tipoCarro = new TipoCarro();
+    public Carro (Volante volante, Parabrisas parabrisas, int numLlantas, int numAsientos,
+            Propietario propietario, TipoCarro tipoCarro, TipoAuto tipoAuto){
+        _volante = volante;
+        _parabrisas = parabrisas;
+        _propietario = propietario;
+        _tipoCarro = tipoCarro;
             _numLlantas = numLlantas;
             _numAsientos = numAsientos;
             

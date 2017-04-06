@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2014139610
 {
-    class Volante
+    public class Volante
     {
         public string NumSerie { get; set; }
         public Volante() { }
