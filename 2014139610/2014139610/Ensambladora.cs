@@ -7,19 +7,46 @@ using System.Threading.Tasks;
 namespace _2014139610
 {
     public class Ensambladora
-    {
-        private TipoAuto _ta;
-        private TipoBus _tb;
-        private TipoCarro _tc;
-        private Carro _carro;
+    {   private string tipo;
+        private List<TipoAuto> _ta;
+        private List<TipoBus> _tb;
+        private List<TipoCarro> _tc;
+        private List<Carro> _carro;
+        private int _numLlantas;
+        private int _numAsientos;
         public Ensambladora(){
-            _carro = new Carro();
+         _carro = new List<Carro>();
+            _ta = new List<TipoAuto>();
         }
-        public Ensambladora (TipoAuto tipoAuto, TipoBus tipoBus, TipoCarro tipoCarro){
-            _tc = tipoCarro;
-            _ta = tipoAuto;
-            _tb = tipoBus;
+        public void Agregar(Carro carro) {
+            _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
+                TipoAuto.Coupe));
+            }
+
+            
+           }        
+       /* public void Eliminar(Carro carro) {
+
         }
-        public Carro carro { get { return _carro; } }
+        public bool IniciarPersonalizacion(string numero) {
+            if (numero[0] == 'a') {
+                return true;
+            }
+            else {return true;  }
+                }
+        public bool FinalizarPersonalizacion()
+        {
+            return true;
+        }
+        public void EnsamblarCarro()
+        {
+            
+        }*/
     }
-}
+
+       
+       
+
+        
+    
+

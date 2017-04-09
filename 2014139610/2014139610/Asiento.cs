@@ -12,11 +12,10 @@ namespace _2014139610
         
         private Cinturon _cinturon;
         public Asiento() {
-            _cinturon = new Cinturon();
+                   
         }
-        public Asiento(string numser) {
-            NumSerie = numser;
-            
+        public Asiento(Cinturon cinturon) {
+            _cinturon = cinturon;            
         }
         public Cinturon cinturon { get {return _cinturon;} }
     }

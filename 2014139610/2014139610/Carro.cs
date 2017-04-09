@@ -22,16 +22,29 @@ namespace _2014139610
         _llanta = new Llanta();
         _asiento = new Asiento();
     }
-    public Carro(Volante volante, Parabrisas parabrisas, int numLlantas, int numAsientos,
-            Propietario propietario, TipoCarro tipoCarro, TipoAuto tipoAuto)
+    public Carro(Volante volante, Parabrisas parabrisas,
+            Propietario propietario, TipoCarro tipoCarro)
     {
         _volante = volante;
         _parabrisas = parabrisas;
         _propietario = propietario;
         _tipoCarro = tipoCarro;
-        _numLlantas = numLlantas;
-        _numAsientos = numAsientos;
-    }
+            
+        }
+        public void AsientosyLLantas() {
+            if (_tipoCarro == TipoCarro.Automovil)
+            {
+                _numAsientos = 5;
+                _numLlantas = 4;
+            }
+            else {
+                _numLlantas = 6;
+                _numAsientos = 10;
+            }
+            Console.WriteLine("NumLlantas: " + _numLlantas);
+            Console.WriteLine("NumAsientos: " + _numAsientos);
+        }
+
         public Volante volante { get {return _volante;}}
         public Parabrisas parabrisas { get { return _parabrisas; } }
         public Propietario propietario { get { return _propietario; } }

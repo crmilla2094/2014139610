@@ -16,12 +16,12 @@ namespace _2014139610
         private Propietario _propietario;
         private TipoCarro _tipoCarro;
         public Automovil() { }
-        public Automovil (Volante volante, Parabrisas parabrisas, int numLlantas, int numAsientos,
+        public Automovil (Volante volante, Parabrisas parabrisas, 
             Propietario propietario, TipoCarro tipoCarro, TipoAuto tipoAuto){
             _volante = volante;
             _parabrisas = parabrisas;
-            _numLlantas = numLlantas;
-            _numAsientos = numAsientos;
+            //_numLlantas = numLlantas;
+            //_numAsientos = numAsientos;
             _propietario = propietario;
             _tipoCarro = tipoCarro;
         }
