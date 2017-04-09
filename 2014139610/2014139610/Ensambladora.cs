@@ -8,6 +8,7 @@ namespace _2014139610
 {
     public class Ensambladora
     {   private string tipo;
+        private string a;
         private List<TipoAuto> _ta;
         private List<TipoBus> _tb;
         private List<TipoCarro> _tc;
@@ -18,21 +19,35 @@ namespace _2014139610
          _carro = new List<Carro>();
             _ta = new List<TipoAuto>();
         }
-        public void Agregar(Carro carro) {
-            _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                TipoAuto.Coupe));
+        public void Agregar(Carro carro, string numero) {
+            if (numero[0] == 'a')
+            {
+                _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
+                    TipoAuto.Coupe));
+            }
+            else {
+                _carro.Add(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
+                    TipoBus.Privado));
+            }
             }
 
             
-           }        
-       /* public void Eliminar(Carro carro) {
-
-        }
-        public bool IniciarPersonalizacion(string numero) {
-            if (numero[0] == 'a') {
-                return true;
+                
+       public void Eliminar(Carro carro, string numero) {
+            if (numero[0] == 'a')
+            {
+                _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
+                    TipoAuto.Coupe));
             }
-            else {return true;  }
+            else
+            {
+                _carro.Remove(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
+                    TipoBus.Privado));
+            }
+        }
+        public void Iniciar(string numero) {
+            Carro c = new Carro();
+            c.NumSerieChasis = numero;
                 }
         public bool FinalizarPersonalizacion()
         {
@@ -41,7 +56,9 @@ namespace _2014139610
         public void EnsamblarCarro()
         {
             
-        }*/
+        }
+
+    }   
     }
 
        

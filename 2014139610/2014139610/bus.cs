@@ -10,11 +10,20 @@ namespace _2014139610
     {
         public TipoBus _tipoBus { get; set;}
         private int _numAsientos { get; set; }
+        private Volante _volante;
+        private Parabrisas _parabrisas;
+        private Propietario _propietario;
+        private TipoCarro _tipoCarro;
         public bus() { 
         }
-        public bus(TipoBus tipoBus, int numAsientos) {
-            _tipoBus = tipoBus;
-            _numAsientos = numAsientos;
+        public bus(Volante volante, Parabrisas parabrisas,
+            Propietario propietario, TipoCarro tipoCarro, TipoBus tipoBus) {
+            _volante = volante;
+            _parabrisas = parabrisas;
+            //_numLlantas = numLlantas;
+            //_numAsientos = numAsientos;
+            _propietario = propietario;
+            _tipoCarro = tipoCarro;
         }
     }
 }

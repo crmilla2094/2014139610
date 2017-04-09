@@ -29,7 +29,7 @@ namespace _2014139610
         _parabrisas = parabrisas;
         _propietario = propietario;
         _tipoCarro = tipoCarro;
-            
+            AsientosyLLantas();
         }
         public void AsientosyLLantas() {
             if (_tipoCarro == TipoCarro.Automovil)
