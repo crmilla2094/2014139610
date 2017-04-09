@@ -43,7 +43,7 @@ namespace _2014139610
             Parabrisas par2 = new Parabrisas("apar002");
             Propietario pers2 = new Propietario("70874480", "Roberto", "Milla", "ABC121");
             Carro carro2 = new Carro(vol2, par2, pers2, TipoCarro.Automovil);
-
+            a.IniciarPersonalizacion(numChasis);
             a.Agregar(carro2, numChasis);
             
 
@@ -52,6 +52,7 @@ namespace _2014139610
             numChasis = "achasis03";
             Propietario pers3 = new Propietario("06692345", "Johny", "Cuya", "ABC122");
             Carro carro3 = new Carro(vol1, par1, pers1, TipoCarro.Automovil);
+            a.IniciarPersonalizacion(numChasis);
             a.Agregar(carro3, numChasis);
             
 
@@ -60,6 +61,7 @@ namespace _2014139610
             Propietario pers4 = new Propietario("70874460", "Consuelo", "Egoavil", "ABC123");
             Carro carro4 = new Carro(vol4, par4, pers4, TipoCarro.Automovil);
             numChasis = "achasis04";
+            a.IniciarPersonalizacion(numChasis);
             a.Agregar(carro4, numChasis);
             
 
@@ -68,6 +70,7 @@ namespace _2014139610
             Propietario pers5 = new Propietario("06752810", "Deissy", "Cuya", "ABC124");
             Carro carro5 = new Carro(vol5, par5, pers5, TipoCarro.Bus);
             numChasis = "bchasis05";
+            a.IniciarPersonalizacion(numChasis);
             a.Agregar(carro5,numChasis);
             
 
@@ -76,6 +79,7 @@ namespace _2014139610
             Propietario pers6 = new Propietario("06795134", "Rosario", "Milla", "ABC125");
             Carro carro6 = new Carro(vol5, par5, pers5, TipoCarro.Bus);
             numChasis = "bchasis06";
+            a.IniciarPersonalizacion(numChasis);
             a.Agregar(carro5,numChasis);
             
         }
