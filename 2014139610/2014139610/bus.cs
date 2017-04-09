@@ -13,16 +13,18 @@ namespace _2014139610
         private Volante _volante;
         private Parabrisas _parabrisas;
         private Propietario _propietario;
+        private string _numSerieChasis;
         private TipoCarro _tipoCarro;
         public bus() { 
         }
         public bus(Volante volante, Parabrisas parabrisas,
-            Propietario propietario, TipoCarro tipoCarro, TipoBus tipoBus) {
+            Propietario propietario, TipoCarro tipoCarro, TipoBus tipoBus, string numSerieChasis) {
             _volante = volante;
             _parabrisas = parabrisas;
             //_numLlantas = numLlantas;
             //_numAsientos = numAsientos;
             _propietario = propietario;
+            _numSerieChasis = numSerieChasis;
             _tipoCarro = tipoCarro;
         }
     }

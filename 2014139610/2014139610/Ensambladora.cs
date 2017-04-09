@@ -27,33 +27,33 @@ namespace _2014139610
                 if (numero[1] == 's')
                 {
                     _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                    TipoAuto.Sedan));
+                    TipoAuto.Sedan, numero));
                     Console.WriteLine("Es un: Sedan");
                 }
                 else {
                     if (numero[1] == 'p')
                     {
                         _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                        TipoAuto.PickUp));
+                        TipoAuto.PickUp, numero));
                         Console.WriteLine("Es un: PickUp");
                     }
                     else {
                         if (numero[1] == 'c')
                         {
                             _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                            TipoAuto.Coupe));
+                            TipoAuto.Coupe, numero));
                             Console.WriteLine("Es un: Coupe");
                         }
                         else {
                             if (numero[1] == 'h')
                             {
                                 _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                                TipoAuto.HatchBack));
+                                TipoAuto.HatchBack, numero));
                                 Console.WriteLine("Es un: HatchBack");
                             }
                             else {
 _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                    TipoAuto.NoDefinido));
+                    TipoAuto.NoDefinido, numero));
                                 Console.WriteLine("Es un: No definido");
                             }
                         }
@@ -65,23 +65,24 @@ _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, Tip
                 
                 if (numero[1] == '1') {
                     _carro.Add(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                    TipoBus.Publico));
+                    TipoBus.Publico, numero));
                     Console.WriteLine("Es un: Bus Público");
                 }
                 else {
                     if (numero[1] == '2')
                     {
                         _carro.Add(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                            TipoBus.Privado));
+                            TipoBus.Privado, numero));
                         Console.WriteLine("Es un: Bus privado");
                     }
                     else {
                         _carro.Add(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                    TipoBus.NoDefinido));
+                    TipoBus.NoDefinido, numero));
                         Console.WriteLine("Es un: Bus no definido");
                     }
                 }
             }
+           
             }
 
             
@@ -94,7 +95,7 @@ _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, Tip
                 if (numero[1] == 's')
                 {
                     _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                    TipoAuto.Sedan));
+                    TipoAuto.Sedan, numero));
 
                 }
                 else
@@ -102,26 +103,26 @@ _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, Tip
                     if (numero[1] == 'p')
                     {
                         _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                        TipoAuto.PickUp));
+                        TipoAuto.PickUp, numero));
                     }
                     else
                     {
                         if (numero[1] == 'c')
                         {
                             _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                            TipoAuto.Coupe));
+                            TipoAuto.Coupe, numero));
                         }
                         else
                         {
                             if (numero[1] == 'h')
                             {
                                 _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                                TipoAuto.HatchBack));
+                                TipoAuto.HatchBack, numero));
                             }
                             else
                             {
                                 _carro.Remove(new Automovil(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Automovil,
-                                                    TipoAuto.NoDefinido));
+                                                    TipoAuto.NoDefinido, numero));
                             }
                         }
                     }
@@ -134,19 +135,19 @@ _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, Tip
                 if (numero[1] == '1')
                 {
                     _carro.Remove(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                    TipoBus.Publico));
+                    TipoBus.Publico, numero));
                 }
                 else
                 {
                     if (numero[1] == '2')
                     {
                         _carro.Remove(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                            TipoBus.Privado));
+                            TipoBus.Privado, numero));
                     }
                     else
                     {
                         _carro.Remove(new bus(carro.volante, carro.parabrisas, carro.propietario, TipoCarro.Bus,
-                    TipoBus.NoDefinido));
+                    TipoBus.NoDefinido, numero));
                     }
                 }
             }
@@ -155,9 +156,13 @@ _carro.Add(new Automovil(carro.volante, carro.parabrisas, carro.propietario, Tip
             Carro c = new Carro();
             c.NumSerieChasis = numero;
                 }
-        public void FinalizarPersonalizacion()
+        public void FinalizarPersonalizacion(string numero)
         {
-            
+            Carro carrito = _carro.Find(ca => ca.NumSerieChasis == numero);
+            var c = new Carro().NumSerieChasis;
+            string _a = c;
+            Console.WriteLine("Numero de Serie de Chasis: {0}\n " ,numero);
+
         }
         public void EnsamblarCarro()
         {
